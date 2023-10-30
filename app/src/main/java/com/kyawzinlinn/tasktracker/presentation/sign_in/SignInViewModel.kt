@@ -23,6 +23,8 @@ class SignInViewModel @Inject constructor(
 
     suspend fun signInWithGoogle() = authenticationRepository.signInWithGoogle()
 
+    fun getSignedInUser() = authenticationRepository.getSignedUser()
+
     fun getSignInResultFromIntent(intent: Intent) {
         viewModelScope.launch {
             val signInResult = authenticationRepository.getSignInResultFromIntent(intent)

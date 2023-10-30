@@ -7,6 +7,7 @@ import com.google.android.gms.auth.api.identity.Identity
 import com.kyawzinlinn.tasktracker.data.repository.AuthenticationRepository
 import com.kyawzinlinn.tasktracker.presentation.sign_in.GoogleAuthUiClient
 import com.kyawzinlinn.tasktracker.presentation.sign_in.SignInResult
+import com.kyawzinlinn.tasktracker.presentation.sign_in.UserData
 import javax.inject.Inject
 
 class AuthenticationRepositoryImpl @Inject constructor(context: Context) : AuthenticationRepository {
@@ -17,6 +18,8 @@ class AuthenticationRepositoryImpl @Inject constructor(context: Context) : Authe
         )
     }
     override suspend fun signInWithGoogle() : IntentSender? = googleAuthUiClient.signIn()
+
+    override fun getSignedUser(): UserData? = googleAuthUiClient.getSignedInUser()
 
     override suspend fun getSignInResultFromIntent(intent: Intent) : SignInResult = googleAuthUiClient.getSignInResultFromIntent(intent)
 

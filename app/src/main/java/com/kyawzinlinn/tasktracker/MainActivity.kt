@@ -58,6 +58,7 @@ class MainActivity : ComponentActivity() {
                     Toast.makeText(applicationContext, state.isSignedInSuccessful.toString(), Toast.LENGTH_LONG)
                         .show()
                     navController.navigate(ScreenRoute.HOME.name)
+                    viewModel.resetState()
                 } else {
                     Toast.makeText(applicationContext, state.signInError ?: "", Toast.LENGTH_LONG)
                         .show()
@@ -71,6 +72,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     TaskTrackerNavHost(
+                        viewModel = viewModel,
                         signInState = state,
                         navController = navController,
                         onSignInClick = {

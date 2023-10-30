@@ -9,9 +9,11 @@ import androidx.navigation.compose.rememberNavController
 import com.kyawzinlinn.tasktracker.presentation.home.HomeScreen
 import com.kyawzinlinn.tasktracker.presentation.sign_in.LoginScreen
 import com.kyawzinlinn.tasktracker.presentation.sign_in.SignInState
+import com.kyawzinlinn.tasktracker.presentation.sign_in.SignInViewModel
 
 @Composable
 fun TaskTrackerNavHost(
+    viewModel: SignInViewModel,
     signInState: SignInState,
     onSignInClick: () -> Unit,
     navController: NavHostController
@@ -28,7 +30,9 @@ fun TaskTrackerNavHost(
         }
 
         composable(route = ScreenRoute.HOME.name) {
-            HomeScreen()
+            HomeScreen(
+                userData = viewModel.getSignedInUser()
+            )
         }
     }
 }
