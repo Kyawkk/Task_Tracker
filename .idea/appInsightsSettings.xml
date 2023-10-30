@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.kyawzinlinn.tasktracker" />
+                  <option name="mobileSdkAppId" value="1:938230558635:android:57c9dac2fd85e003f6ecee" />
+                  <option name="projectId" value="task-tracker-4b3e5" />
+                  <option name="projectNumber" value="938230558635" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

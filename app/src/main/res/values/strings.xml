@@ -1,3 +1,6 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Task Tracker</string>
+    <string name="sign_in_with_google" translatable="false">Continue with Google</string>
+    <string name="web_client_id">938230558635-gol6079hacart32osoibja7ifbogp46m.apps.googleusercontent.com</string>
+    <string name="log_in_caption">Organize, Collaborate, Succeed: Log in to Your World of Productivity.</string>
 </resources>
